@@ -345,7 +345,7 @@ body {
   position: absolute;
   width: 140px;
   height: 20px;
-  background: linear-gradient(rgb(255, 91, 91), rgb(255, 120, 120));
+  background: linear-gradient(rgb(255, 255, 255), rgb(255, 120, 120));
   margin-top: -90px;
   margin-left: 40px;
 }
@@ -398,10 +398,10 @@ body {
   position: absolute;
   content: "MILK";
   color: rgb(255, 91, 91);
-  font-size: 12px;
+  font-size: 52px;
 }
 
-.milkLabel:after {
+/* .milkLabel:after {
   content: "";
   position: absolute;
   width: 81px;
@@ -410,7 +410,7 @@ body {
   transform: skewY(-30deg);
   margin-left: 219px;
   margin-top: -47px;
-}
+} */
 
 .milkShadow {
   position: absolute;
