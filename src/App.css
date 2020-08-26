@@ -1,38 +1,3306 @@
-.App {
-  text-align: center;
+html {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to right, rgb(0, 109, 103), rgb(22, 70, 126));
+  color: white;
+  font-size: 24px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 950px) {
+  .row {
+    width: 850px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .lastRow {
+    width: 850px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+}
+
+@media screen and (max-width: 949px) {
+  .row {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .lastRow {
+    width: 400px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+}
+
+/* WATER BOTTLE */
+.waterbottleContainer {
+  min-width: 400px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1fdff;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.waterbottleCap {
+  width: 42px;
+  height: 15px;
+  border-radius: 15%;
+  background: linear-gradient(to right, rgb(200, 200, 200), #ffffff 40%, #ffffff 60%, rgb(200, 200, 200));
+  z-index: 4;
+}
+
+.waterbottleCap:before {
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 15px;
+  background: linear-gradient(transparent, transparent 10px, #002836 10px, #002836 12px, transparent 12px, transparent)
+}
+
+.waterbottleNeck {
+  width: 37.5px;
+  height: 7px;
+  margin-top: -3px;
+  z-index: 3;
+}
+
+.waterbottleNeck:before {
+  content: '';
+  position: absolute;
+  width: 37.5px;
+  height: 7.5px;
+  background: linear-gradient(to right, #b9f1f8, #dbf8ff 40%, #dbf8ff 60%, #b9f1f8);
+}
+
+.waterbottleTop {
+  width: 120px;
+  height: 120px;
+  border-radius: 70% 70% 0 0;
+  margin-top: -3px;
+  background: linear-gradient(to right, #8df2ff, #dbf8ff 40%, #dbf8ff 60%, #8df2ff);
+  z-index: 2;
+}
+
+.waterbottleSticker {
+  width: 120px;
+  height: 60px;
+  background: linear-gradient(to right, rgb(55, 55, 255), rgb(125, 125, 255) 40%, rgb(125, 125, 255) 60%, rgb(55, 55, 255));
+  margin-top: 60px;
+  z-index: 1;
+}
+
+.waterbottleSticker:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #caf2ff;
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(-45deg);
+  margin-left: 46px;
+  margin-top: 17.5px;
+}
+
+.waterbottleSticker:after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  background: radial-gradient(circle at center, white 0, #caf2ff, #caf2ff 100%);
+  border-radius: 50%;
+  margin-left: 48px;
+  margin-top: 20px;
+}
+
+.waterbottleBase {
+  width: 120px;
+  height: 180px;
+  margin-top: -2%;
+}
+
+.waterbottleCurve {
+  width: 120px;
+  height: 20px;
+  border-radius: 13%;
+  margin-top: -1px;
+  background: linear-gradient(to right, #8df2ff, #dbf8ff 40%, #dbf8ff 60%, #8df2ff);
+}
+
+.waterbottleCurveShadow {
+  width: 100%;
+  height: 20px;
+  border-radius: 13%;
+  margin-top: -1px;
+  background: linear-gradient(to right, #8df2ff, #dbf8ff 40%, #dbf8ff 60%, #8df2ff);
+  box-shadow: 0px 12px 12px -4px #003d53;
+}
+
+/* MILK */
+.milkContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #ffb3b3;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.milkFront {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(rgb(255, 90, 90), rgb(255, 50, 50));
+  margin-top: 180px;
+  margin-left: 100px;
+}
+
+.milkFront:before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 70px;
+  background: linear-gradient(rgb(255, 140, 140), rgb(255, 91, 91));
+  transform: skew(-30deg);
+  margin-top: -70px;
+  margin-left: 20px;
+}
+
+.milkFront:after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 20px;
+  background: linear-gradient(rgb(255, 91, 91), rgb(255, 120, 120));
+  margin-top: -90px;
+  margin-left: 40px;
+}
+
+.milkSide {
+  width: 80px;
+  height: 140px;
+  background: linear-gradient(150deg, rgb(255, 110, 110), rgb(255, 50, 50));
+  transform: skewY(-30deg);
+  margin-top: -163px;
+  margin-left: 240px;
+}
+
+.milkSide:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 47px solid rgb(180, 180, 180);
+  margin-top: -47px;
+}
+
+.milkSide:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 29.5px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid rgb(226, 226, 226);
+  margin-top: -35px;
+}
+
+.milkLabel {
+  width: 140px;
+  height: 70px;
+  background-color: white;
+  margin-top: -80px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.milkLabel:before {
+  content: "MILK";
+  color: rgb(255, 91, 91);
+  font-size: 52px;
+}
+
+.milkLabel:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  background: linear-gradient(150deg, white, rgb(230, 230, 230));
+  transform: skewY(-30deg);
+  margin-left: 220px;
+  margin-top: -46.5px;
+}
+
+.milkShadow {
+  width: 140px;
+  height: 52px;
+  transform: skew(-61deg);
+  margin-left: 144px;
+  margin-top: -19px;
+  box-shadow: 18px 10px 6px -4px #630000;
+  z-index: -999;
+}
+
+/* ORANGE JUICE */
+.ojContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #ffdba4;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.ojCupOutline {
+  position: absolute;
+  width: 100px;
+  height: 0;
+  background-color: transparent;
+  border-bottom: 200px solid white;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  transform: rotate(180deg);
+  margin-top: 120px;
+  margin-left: 125px;
+  z-index: 2;
+}
+
+.ojCupInside {
+  position: absolute;
+  width: 90px;
+  height: 0;
+  background-color: transparent;
+  border-bottom: 190px solid rgb(245, 245, 245);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  transform: rotate(180deg);
+  margin-top: 125px;
+  margin-left: 129.5px;
+  z-index: 3;
+}
+
+.ojJuice {
+  position: absolute;
+  width: 90px;
+  height: 0;
+  background-color: transparent;
+  border-bottom: 160px solid rgb(255, 168, 69);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(180deg);
+  margin-top: 154px;
+  margin-left: 134px;
+  z-index: 5;
+}
+
+.ojOrange {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(255, 136, 0), rgb(255, 202, 103));
+  margin-top: 71px;
+  margin-left: 76px;
+  z-index: 1;
+}
+
+.ojOrange:before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(255, 182, 46), rgb(255, 230, 147));
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.ojOrangePart {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: rgb(255, 197, 91);
+  margin-top: 126px;
+  margin-left: 133.5px;
+  z-index: 4;
+  transform: skew(7deg);
+  border-radius: 0 0 100% 0;
+}
+
+.ojOrangePart:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 231, 151);
+  border-radius: 0 0 100% 0;
+}
+
+.ojLine1 {
+  position: absolute;
+  height: 100px;
+  width: 4px;
+  background-color: rgb(255, 155, 41);
+  margin-left: 49px;
+}
+
+.ojLine2 {
+  position: absolute;
+  height: 4px;
+  width: 100px;
+  background-color: rgb(255, 153, 0);
+  margin-top: 49px;
+}
+
+.ojLine3 {
+  position: absolute;
+  height: 4px;
+  width: 100px;
+  background-color: rgb(255, 153, 36);
+  margin-top: 49px;
+  transform: rotate(45deg);
+}
+
+.ojLine4 {
+  position: absolute;
+  height: 4px;
+  width: 96px;
+  background-color: rgb(255, 177, 31);
+  margin-top: 49px;
+  margin-left: 2px;
+  transform: rotate(-45deg);
+}
+
+.ojLine5 {
+  position: absolute;
+  height: 4px;
+  width: 48px;
+  background-color: rgb(255, 190, 68);
+  margin-top: 17px;
+  margin-left: -6px;
+  transform: rotate(45deg);
+}
+
+.ojShadow {
+  width: 96px;
+  height: 20px;;
+  margin-top: 298px;
+  margin-left: 152px;
+  box-shadow: 0px 12px 8px -4px #976700;
+}
+
+/* SOJU */
+.sojuContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #adffd9;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.sojuBottle {
+  width: 100px;
+  height: 190px;
+  background: linear-gradient(90deg, rgb(174, 255, 174),rgb(49, 212, 49) 5%, rgb(100, 245, 100) 10%, rgb(156, 255, 156) 40%, rgb(176, 255, 176) 80%, rgb(108, 255, 108) 90%, rgb(59, 231, 59) 95%, rgb(185, 255, 185));
+  border-radius: 35% 35% 10% 10%;
+  margin-top: 150px;
+  margin-left: 150px;
+  box-shadow: 0px 13px 10px -4px #005a17;
+}
+
+.sojuBottle:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  background: linear-gradient(90deg, rgb(93, 255, 93),rgb(98, 255, 98) 5%, rgb(135, 255, 135) 10%, rgb(156, 255, 156) 20%, rgb(176, 255, 176) 75%, rgb(142, 255, 142) 96%, rgb(123, 255, 123) 98%, rgb(97, 255, 97));
+  margin-top: -79px;
+  margin-left: 30px;
+}
+
+.sojuSticker {
+  width: 98px;
+  height: 100px;
+  background: linear-gradient(90deg, rgb(201, 201, 201) 2%, white 10%, white 90%, rgb(201, 201, 201) 98%);
+  margin-top: -130px;
+  margin-left: 151px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sojuSticker:before {
+  content: "소주";
+  color: rgb(0, 145, 0);
+  font-size: 30px;
+}
+
+.sojuSticker:after {
+  content: "green grape";
+  color: rgb(103, 223, 103);
+  font-size: 11px;
+}
+
+.sojuCap {
+  width: 42px;
+  height: 20px;
+  background: linear-gradient(90deg, rgb(0, 128, 0), rgb(18, 180, 18), rgb(38, 190, 38) );
+  border-radius: 10%;
+  margin-top: -259px;
+  margin-left: 179px;
+}
+
+.sojuCap:before {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(93, 255, 93),rgb(98, 255, 98) 5%, rgb(135, 255, 135) 10%, rgb(156, 255, 156) 20%, rgb(176, 255, 176) 75%, rgb(142, 255, 142) 96%, rgb(123, 255, 123) 98%, rgb(97, 255, 97));
+  margin-top: 14px;
+}
+
+/* JIMMY */
+.jimmyContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgb(255, 131, 131), rgb(255, 206, 116), rgb(255, 255, 147), rgb(130, 255, 172), rgb(114, 159, 255), rgb(196, 107, 255));
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.jimmyFace {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgb(249, 255, 189), rgb(255, 255, 214));
+  border-radius: 30% 30% 45% 45%;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.jimmyGlassesL {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 15% 20% 50% 40%;
+  margin-top: -10px;
+  margin-left: 113px;
+  z-index: 2;
+}
+
+.jimmyGlassesL:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: linear-gradient(135deg, rgb(255, 131, 131), rgb(255, 206, 116), rgb(255, 255, 147));
+  border-radius: 15% 20% 50% 40%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.jimmyGlassesL:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  margin-top: 9px;
+  margin-left: 80px;
+}
+
+.jimmyGlassesR {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 20% 15% 40% 50%;
+  margin-top: -10px;
+  margin-left: 204px;
+  z-index: 2;
+}
+
+.jimmyGlassesR:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: linear-gradient(135deg, rgb(130, 255, 172), rgb(114, 159, 255), rgb(196, 107, 255));
+  border-radius: 20% 15% 40% 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.jimmyHair {
+  width: 200px;
+  height: 70px;
+  background: linear-gradient(172deg, rgb(0, 0, 0), rgb(41, 41, 41) 5%, rgb(66, 66, 66) 15%, black 40%);
+  margin-top: -210px;
+  margin-left: 100px;
+  border-radius: 50% 50% 0 40%;
+}
+
+.jimmyHair:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 62px solid black;
+  border-right: 30px solid transparent;
+  margin-top: 36px;
+}
+
+.jimmyHair:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 62px solid black;
+  border-left: 60px solid transparent;
+  margin-top: 36px;
+  margin-left: 140px;
+}
+
+.jimmyHairStrands {
+  width: 0;
+  height: 0;
+  border-top: 40px solid rgb(0, 0, 0);
+  border-left: 60px solid transparent;
+  transform: skew(60deg);
+  margin-left: 160px;
+  margin-top: -8px;
+}
+
+.jimmyHairStrands:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 30px solid rgb(0, 0, 0);
+  border-left: 80px solid transparent;
+  margin-top: -33px;
+  margin-left: -10px;
+  transform: skew(-30deg);
+}
+
+.jimmyHairStrands:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 65px solid rgb(0, 0, 0);
+  border-left: 100px solid transparent;
+  margin-top: -72px;
+  margin-left: 26px;
+  transform: skew(-50deg);
+}
+
+.jimmyNose {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(102, 116, 46);
+  border-radius: 0 0 45% 45%;
+  margin-left: 192px;
+  margin-top: 35px;
+  z-index: 1;
+}
+
+.jimmyNose:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, rgb(249, 255, 189), rgb(255, 255, 214));
+  border-radius: 0 0 50% 50%;
+  margin-top: -8px;
+  margin-left: -2.5px;
+}
+
+.jimmyMouth {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 109, 109);
+  border-radius: 0 0 45% 45%;
+  margin-left: 175px;
+  margin-top: 35px;
+}
+
+.jimmyMouth:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgb(249, 255, 189), rgb(255, 255, 214));
+  border-radius: 0 0 50% 50%;
+  margin-top: -15px;
+  margin-left: -5px;
+}
+
+.jimmyEarL {
+  width: 0;
+  height: 0;
+  border-top: 30px solid rgb(249, 255, 189);
+  border-left: 15px solid transparent;
+  margin-left: 88px;
+  margin-top: 10px;
+}
+
+.jimmyEarL:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(249, 255, 189);
+  margin-left: -15px;
+  margin-top: -45px;
+  border-radius: 50% 50% 0 0;
+}
+
+.jimmyEarL:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background-color: black;
+  margin-left: -11px;
+  margin-top: -22px;
+}
+
+.jimmyEarR {
+  width: 0;
+  height: 0;
+  border-top: 30px solid rgb(255, 255, 214);
+  border-right: 15px solid transparent;
+  margin-left: 296px;
+  margin-top: -27px;
+}
+
+.jimmyEarR:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 255, 214);
+  margin-top: -45px;
+  border-radius: 50% 50% 0 0;
+}
+
+.jimmyEarR:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background-color: black;
+  margin-left: 7px;
+  margin-top: -22px;
+}
+
+/* JIMMY2 */
+.jimmy2Container {
+  min-width: 400px;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgb(90, 90, 90), rgb(121, 121, 121), rgb(141, 141, 141), rgb(190, 190, 190), rgb(221, 221, 221), rgb(245, 245, 245), rgb(230, 230, 230), rgb(206, 206, 206));
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.jimmy2Hair {
+  width: 200px;
+  height: 70px;
+  background: linear-gradient(172deg, rgb(0, 0, 0), rgb(41, 41, 41) 5%, rgb(66, 66, 66) 15%, black 40%);
+  margin-top: -210px;
+  margin-left: 100px;
+  border-radius: 50% 50% 0 40%;
+}
+
+.jimmy2Hair:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 62px solid black;
+  border-right: 30px solid transparent;
+  margin-top: 36px;
+}
+
+.jimmy2Hair:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 62px solid black;
+  border-left: 30px solid transparent;
+  margin-top: 36px;
+  margin-left: 170px;
+}
+
+.jimmy2HairStrands {
+  width: 0;
+  height: 0;
+  border-bottom: 38px solid black;
+  border-right: 10px solid transparent;
+  margin-left: 300px;
+  margin-top: -38px;
+}
+
+.jimmy2Nose {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(102, 116, 46);
+  border-radius: 0 0 45% 45%;
+  margin-left: 192px;
+  margin-top: 64px;
+  z-index: 1;
+}
+
+.jimmy2Nose:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, rgb(249, 255, 189), rgb(255, 255, 214));
+  border-radius: 0 0 50% 50%;
+  margin-top: -8px;
+  margin-left: -2.5px;
+}
+
+.jimmy2Mouth {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 109, 109);
+  border-radius: 0 0 45% 45%;
+  margin-left: 175px;
+  margin-top: 67px;
+}
+
+.jimmy2Mouth:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgb(249, 255, 189), rgb(255, 255, 214));
+  border-radius: 0 0 50% 50%;
+  margin-top: -15px;
+  margin-left: -5px;
+}
+
+.jimmy2EarL {
+  width: 0;
+  height: 0;
+  border-top: 30px solid rgb(249, 255, 189);
+  border-left: 15px solid transparent;
+  margin-left: 88px;
+  margin-top: 44px;
+}
+
+.jimmy2EarL:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(249, 255, 189);
+  margin-left: -15px;
+  margin-top: -45px;
+  border-radius: 50% 50% 0 0;
+}
+
+.jimmy2EarR {
+  width: 0;
+  height: 0;
+  border-top: 30px solid rgb(255, 255, 214);
+  border-right: 15px solid transparent;
+  margin-left: 296px;
+  margin-top: -27px;
+}
+
+.jimmy2EarR:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 255, 214);
+  margin-top: -45px;
+  border-radius: 50% 50% 0 0;
+}
+
+.jimmy2GlassesL {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 15% 20% 50% 40%;
+  margin-top: 20px;
+  margin-left: 113px;
+  z-index: 2;
+}
+
+.jimmy2GlassesL:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: linear-gradient(135deg, white, rgb(139, 139, 139) 5px, white 15px, rgb(114, 114, 114) 20px, white 30px, rgb(189, 189, 189) 45px, rgb(197, 197, 197) 55px, rgb(233, 233, 233));
+  border-radius: 15% 20% 50% 40%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.jimmy2GlassesL:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  margin-top: 9px;
+  margin-left: 80px;
+}
+
+.jimmy2GlassesR {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 20% 15% 40% 50%;
+  margin-top: 20px;
+  margin-left: 204px;
+  z-index: 2;
+}
+
+.jimmy2GlassesR:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: linear-gradient(135deg, rgb(228, 228, 228), rgb(247, 247, 247));
+  border-radius: 20% 15% 40% 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* JIMMY3 */
+.jimmy3Container {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: rgb(137, 137, 255);
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.jimmy3GlassesL {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 15% 20% 50% 40%;
+  margin-top: -10px;
+  margin-left: 113px;
+  z-index: 2;
+}
+
+.jimmy3GlassesL:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-color: white;
+  border-radius: 15% 20% 50% 40%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.jimmy3GlassesL:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  margin-top: 9px;
+  margin-left: 80px;
+}
+
+.jimmy3GlassesR {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 20% 15% 40% 50%;
+  margin-top: -10px;
+  margin-left: 204px;
+  z-index: 2;
+}
+
+.jimmy3GlassesR:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20% 15% 40% 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* JIMMY4 */
+.jimmy4Container {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: rgb(109, 255, 206);
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.jimmy4GlassesL {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 15% 20% 50% 40%;
+  margin-top: 20px;
+  margin-left: 113px;
+  z-index: 2;
+}
+
+.jimmy4GlassesL:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-color: white;
+  border-radius: 15% 20% 50% 40%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.jimmy4GlassesL:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  margin-top: 9px;
+  margin-left: 80px;
+}
+
+.jimmy4GlassesR {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-radius: 20% 15% 40% 50%;
+  margin-top: 20px;
+  margin-left: 204px;
+  z-index: 2;
+}
+
+.jimmy4GlassesR:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20% 15% 40% 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* FIRST NAME */
+.firstNameContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.firstNameJ {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 180px;
+  margin-left: 66px;
+  z-index: 2;
+}
+
+.firstNameJ:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 48px;
+  margin-left: -24px;
+}
+
+.firstNameJShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 72px;
+  z-index: 1;
+}
+
+.firstNameJShadow:before {
+  content: "";
+  position: absolute;
+  width: 12.5px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(45deg) skewY(-45deg);
+  margin-top: 6px;
+  margin-left: 35px;
+}
+
+.firstNameJShadow:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 48px;
+  margin-left: 24px;
+}
+
+.firstNameI {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 180px;
+  margin-left: 102px;
+}
+
+.firstNameIShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 108px;
+  z-index: 1;
+}
+
+.firstNameIShadow:before {
+  content: "";
+  position: absolute;
+  width: 12.5px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(45deg) skewY(-45deg);
+  margin-top: 6px;
+  margin-left: 35px;
+}
+
+.firstNameM1a {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 180px;
+  margin-left: 138px;
+  z-index: 2;
+}
+
+.firstNameM1a:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  transform: skew(20deg);
+  margin-left: 11px;
+}
+
+.firstNameM1a:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  transform: skew(-20deg);
+  margin-left: 33px;
+}
+
+.firstNameM1b {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 180px;
+  margin-left: 182px;
+  z-index: 2;
+}
+
+.firstNameM1aShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 144px;
+  z-index: 1;
+}
+
+.firstNameM1aShadow:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-left: 44px;
+}
+
+.firstNameM1aShadow:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 60px;
+  background-color: white;
+  transform: skew(45deg) skewY(-20deg) rotate(-18deg);
+  margin-top: .1px;
+  margin-left: 37.9px;
+}
+
+.firstNameM1bShadow {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 174px;
+  margin-left: 150px;
+  transform: skewY(-45deg);
+  z-index: 1;
+}
+
+.firstNameM1bShadow:before {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 59px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 42.5px;;
+  margin-left: 41.5px;
+}
+
+.firstNameM1bShadow:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 54px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 34px;
+  margin-top: 40px;
+  transform: skewY(45deg) skew(-20deg) skewY(-45deg);
+}
+
+.firstNameM2a {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 180px;
+  margin-left: 218px;
+  z-index: 2;
+}
+
+.firstNameM2a:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  transform: skew(20deg);
+  margin-left: 11px;
+}
+
+.firstNameM2a:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  transform: skew(-20deg);
+  margin-left: 33px;
+}
+
+.firstNameM2b {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 180px;
+  margin-left: 262px;
+  z-index: 2;
+}
+
+.firstNameM2aShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 224px;
+  z-index: 1;
+}
+
+.firstNameM2aShadow:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-left: 44px;
+}
+
+.firstNameM2aShadow:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 60px;
+  background-color: white;
+  transform: skew(45deg) skewY(-20deg) rotate(-18deg);
+  margin-top: .1px;
+  margin-left: 37.9px;
+}
+
+.firstNameM2bShadow {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 174px;
+  margin-left: 230px;
+  transform: skewY(-45deg);
+  z-index: 1;
+}
+
+.firstNameM2bShadow:before {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 59px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 42.5px;;
+  margin-left: 41.5px;
+}
+
+.firstNameM2bShadow:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 54px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 34px;
+  margin-top: 40px;
+  transform: skewY(45deg) skew(-20deg) skewY(-45deg);
+}
+
+.firstNameY {
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: rgb(169, 209, 255);
+  margin-top: 210px;
+  margin-left: 316px;
+  z-index: 2;
+}
+
+.firstNameY:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: rgb(169, 209, 255);
+  transform: skew(30deg);
+  margin-top: -30px;
+  margin-left: -9px;
+}
+
+.firstNameY:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: rgb(169, 209, 255);
+  transform: skew(-30deg);
+  margin-top: -30px;
+  margin-left: 9px;
+}
+
+.firstNameYShadow1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 305px;
+  z-index: 1;
+}
+
+.firstNameYShadow1:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-left: 35px;
+}
+
+.firstNameYShadow1:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: white;
+  transform: skew(45deg) skewY(-45deg);
+  margin-top: 36px;
+  margin-left: 68px;
+}
+
+.firstNameYShadow2 {
+  position: absolute;
+  width: 13px;
+  height: 30px;
+  background-color: white;
+  transform: skewY(-30deg) rotate(-23deg);
+  margin-top: 169.5px;
+  margin-left: 316px;
+  z-index: 1;
+}
+
+.firstNameYShadow2:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 31px;
+  background-color: white;
+  transform: rotate(23deg) skewY(30deg) skew(-30deg) skewY(-67deg);
+  margin-top: 23px;
+  margin-left: 16px;
+}
+
+/* FIRST NAME 2 */
+.firstName2Container {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.firstName2J {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 180px;
+  margin-left: 66px;
+  z-index: 2;
+}
+
+.firstName2J:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 48px;
+  margin-left: -24px;
+}
+
+.firstName2JShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 72px;
+  z-index: 1;
+}
+
+.firstName2JShadow:before {
+  content: "";
+  position: absolute;
+  width: 12.5px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(45deg) skewY(-45deg);
+  margin-top: 6px;
+  margin-left: 35px;
+}
+
+.firstName2JShadow:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 48px;
+  margin-left: 24px;
+}
+
+.firstName2I {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 180px;
+  margin-left: 102px;
+}
+
+.firstName2IShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 108px;
+  z-index: 1;
+}
+
+.firstName2IShadow:before {
+  content: "";
+  position: absolute;
+  width: 12.5px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(45deg) skewY(-45deg);
+  margin-top: 6px;
+  margin-left: 35px;
+}
+
+.firstName2M1a {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 180px;
+  margin-left: 138px;
+  z-index: 2;
+}
+
+.firstName2M1a:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  transform: skew(20deg);
+  margin-left: 11px;
+}
+
+.firstName2M1a:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  transform: skew(-20deg);
+  margin-left: 33px;
+}
+
+.firstName2M1b {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 180px;
+  margin-left: 182px;
+  z-index: 2;
+}
+
+.firstName2M1aShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 144px;
+  z-index: 1;
+}
+
+.firstName2M1aShadow:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-left: 44px;
+}
+
+.firstName2M1aShadow:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 60px;
+  background-color: white;
+  transform: skew(45deg) skewY(-20deg) rotate(-18deg);
+  margin-top: .1px;
+  margin-left: 37.9px;
+}
+
+.firstName2M1bShadow {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 174px;
+  margin-left: 150px;
+  transform: skewY(-45deg);
+  z-index: 1;
+}
+
+.firstName2M1bShadow:before {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 59px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 42.5px;;
+  margin-left: 41.5px;
+}
+
+.firstName2M1bShadow:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 54px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 34px;
+  margin-top: 40px;
+  transform: skewY(45deg) skew(-20deg) skewY(-45deg);
+}
+
+.firstName2M2a {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 180px;
+  margin-left: 218px;
+  z-index: 2;
+}
+
+.firstName2M2a:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  transform: skew(20deg);
+  margin-left: 11px;
+}
+
+.firstName2M2a:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  transform: skew(-20deg);
+  margin-left: 33px;
+}
+
+.firstName2M2b {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 180px;
+  margin-left: 262px;
+  z-index: 2;
+}
+
+.firstName2M2aShadow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 224px;
+  z-index: 1;
+}
+
+.firstName2M2aShadow:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-left: 44px;
+}
+
+.firstName2M2aShadow:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 60px;
+  background-color: white;
+  transform: skew(45deg) skewY(-20deg) rotate(-18deg);
+  margin-top: .1px;
+  margin-left: 37.9px;
+}
+
+.firstName2M2bShadow {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 174px;
+  margin-left: 230px;
+  transform: skewY(-45deg);
+  z-index: 1;
+}
+
+.firstName2M2bShadow:before {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 59px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 42.5px;;
+  margin-left: 41.5px;
+}
+
+.firstName2M2bShadow:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 54px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 34px;
+  margin-top: 40px;
+  transform: skewY(45deg) skew(-20deg) skewY(-45deg);
+}
+
+.firstName2Y {
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: rgb(255, 180, 240);
+  margin-top: 210px;
+  margin-left: 316px;
+  z-index: 2;
+}
+
+.firstName2Y:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: rgb(255, 180, 240);
+  transform: skew(30deg);
+  margin-top: -30px;
+  margin-left: -9px;
+}
+
+.firstName2Y:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: rgb(255, 180, 240);
+  transform: skew(-30deg);
+  margin-top: -30px;
+  margin-left: 9px;
+}
+
+.firstName2YShadow1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  transform: skew(-45deg);
+  margin-top: 168px;
+  margin-left: 305px;
+  z-index: 1;
+}
+
+.firstName2YShadow1:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-left: 35px;
+}
+
+.firstName2YShadow1:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background-color: white;
+  transform: skew(45deg) skewY(-45deg);
+  margin-top: 36px;
+  margin-left: 68px;
+}
+
+.firstName2YShadow2 {
+  position: absolute;
+  width: 13px;
+  height: 30px;
+  background-color: white;
+  transform: skewY(-30deg) rotate(-23deg);
+  margin-top: 169.5px;
+  margin-left: 316px;
+  z-index: 1;
+}
+
+.firstName2YShadow2:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 31px;
+  background-color: white;
+  transform: rotate(23deg) skewY(30deg) skew(-30deg) skewY(-67deg);
+  margin-top: 23px;
+  margin-left: 16px;
+}
+
+.firstName1 {
+
+}
+
+.firstName2 {
+  margin-top: -120px;
+}
+
+.firstName3 {
+  margin-top: 240px;
+}
+
+/* NYC */
+.nycContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background: linear-gradient(rgb(29, 0, 29), rgb(33, 6, 46), rgb(74, 16, 122), rgb(148, 113, 168), rgb(132, 39, 145), rgb(68, 27, 136), rgb(79, 31, 167), rgb(38, 115, 202));
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.nycBuilding1 {
+  position: absolute;
+  width: 80px;
+  height: 200px;
+  background-color: rgb(93, 93, 230);
+  margin-left: 5px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding1Outline {
+  position: absolute;
+  width: 90px;
+  height: 205px;
+  background: linear-gradient(rgb(94, 132, 255),rgb(34, 55, 126));
+  margin-top: 195px;
+}
+
+.nycBuilding1Section {
+  width: 80px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow1On {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow1Off {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(28, 62, 136), rgb(34, 20, 116));
+}
+
+.nycBuilding2 {
+  position: absolute;
+  width: 60px;
+  height: 160px;
+  background-color: rgb(197, 66, 175);
+  margin-left: 95px;
+  margin-top: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding2Outline {
+  position: absolute;
+  width: 70px;
+  height: 165px;
+  background: linear-gradient(rgb(255, 97, 194),rgb(175, 0, 137));
+  margin-top: 235px;
+  margin-left: 90px;
+}
+
+.nycBuilding2Section {
+  width: 60px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow2On {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow2Off {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(148, 40, 112), rgb(131, 19, 131));
+}
+
+.nycBuilding3Outline {
+  position: absolute;
+  width: 50px;
+  height: 225px;
+  background: linear-gradient(rgb(174, 246, 255),rgb(1, 150, 170));
+  margin-left: 160px;
+  margin-top: 175px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding3 {
+  position: absolute;
+  width: 40px;
+  height: 220px;
+  background-color: rgb(61, 159, 224);
+  margin-left: 165px;
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding3Section {
+  width: 40px;
+  height: 31px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow3On {
+  width: 5px;
+  height: 25px;
+  background: linear-gradient(rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow3Off {
+  width: 5px;
+  height: 25px;
+  background: linear-gradient(rgb(34, 110, 129), rgb(18, 85, 116));
+}
+
+.nycBuilding4Outline {
+  position: absolute;
+  width: 50px;
+  height: 245px;
+  background: linear-gradient(rgb(255, 229, 174),rgb(170, 131, 1));
+  margin-left: 260px;
+  margin-top: 155px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding4 {
+  position: absolute;
+  width: 40px;
+  height: 240px;
+  background-color: rgb(226, 164, 49);
+  margin-left: 265px;
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding4Section {
+  width: 40px;
+  height: 31px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow4On {
+  width: 5px;
+  height: 25px;
+  background: linear-gradient(rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow4Off {
+  width: 5px;
+  height: 25px;
+  background: linear-gradient(rgb(138, 118, 33), rgb(156, 113, 20));
+}
+
+.nycBuilding5 {
+  position: absolute;
+  width: 80px;
+  height: 140px;
+  background-color: rgb(69, 130, 211);
+  margin-left: 315px;
+  margin-top: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding5Outline {
+  position: absolute;
+  width: 90px;
+  height: 145px;
+  background: linear-gradient(rgb(160, 182, 255),rgb(0, 30, 165));
+  margin-top: 255px;
+  margin-left: 310px;
+}
+
+.nycBuilding5Section {
+  width: 80px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow5On {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow5Off {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(47, 93, 163), rgb(25, 33, 139));
+}
+
+.nycBuilding6 {
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  background-color: rgb(163, 95, 104);
+  margin-left: 202px;
+  margin-top: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding6Section {
+  width: 80px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow6On {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(255, 164, 137), rgb(255, 212, 209));
+}
+
+.nycWindow6Off {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(82, 0, 0), rgb(136, 0, 0));
+}
+
+.nycBuilding7 {
+  position: absolute;
+  width: 32px;
+  height: 120px;
+  background-color: rgb(91, 83, 170);
+  margin-left: 76px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding7Section {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow7On {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(187, 219, 255), rgb(253, 255, 225));
+}
+
+.nycWindow7Off {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(56, 24, 143), rgb(82, 24, 158));
+}
+
+.nycBuilding8 {
+  position: absolute;
+  width: 32px;
+  height: 90px;
+  background-color: rgb(97, 137, 155);
+  margin-left: 114px;
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding8Section {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow8On {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(187, 219, 255), rgb(253, 255, 225));
+}
+
+.nycWindow8Off {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(50, 80, 94), rgb(50, 101, 124));
+}
+
+.nycBuilding9 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(107, 137, 182);
+  margin-left: 300px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding9Section {
+  width: 60px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow9On {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(198, 225, 255), rgb(181, 228, 255));
+}
+
+.nycWindow9Off {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(12, 70, 104), rgb(22, 57, 109));
+}
+
+.nycBuilding10 {
+  position: absolute;
+  width: 32px;
+  height: 90px;
+  background-color: rgb(151, 92, 156);
+  margin-left: 0px;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding10Section {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow10On {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(250, 214, 255), rgb(245, 172, 255));
+}
+
+.nycWindow10Off {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(163, 18, 127), rgb(158, 5, 158));
+}
+
+.nycBuilding11 {
+  position: absolute;
+  width: 32px;
+  height: 120px;
+  background-color: rgb(143, 138, 75);
+  margin-left: 54px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding11Section {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow11On {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(250, 255, 202), rgb(255, 246, 161));
+}
+
+.nycWindow11Off {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(119, 112, 10), rgb(129, 148, 21));
+}
+
+.nycBuilding12 {
+  position: absolute;
+  width: 60px;
+  height: 70px;
+  background-color: rgb(83, 147, 167);
+  margin-left: 190px;
+  margin-top: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding12Section {
+  width: 60px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow12On {
+  width: 14px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(212, 255, 219), rgb(196, 255, 213));
+}
+
+.nycWindow12Off {
+  width: 14px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(11, 105, 77), rgb(3, 71, 45));
+}
+
+.nycBuilding13 {
+  position: absolute;
+  width: 40px;
+  height: 100px;
+  background-color: rgb(90, 160, 125);
+  margin-left: 295px;
+  margin-top: 115px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding13Section {
+  width: 39px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow13On {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(208, 255, 212), rgb(175, 255, 179));
+}
+
+.nycWindow13Off {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(22, 77, 5), rgb(11, 122, 30));
+}
+
+.nycBuilding14 {
+  position: absolute;
+  width: 32px;
+  height: 120px;
+  background-color: rgb(170, 89, 180);
+  margin-left: 368px;
+  margin-top: 135px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding14Section {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow14On {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(255, 216, 253), rgb(243, 164, 255));
+}
+
+.nycWindow14Off {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(rgb(117, 16, 121), rgb(94, 11, 89));
+}
+
+.nycBuilding15 {
+  position: absolute;
+  width: 140px;
+  height: 80px;
+  background-color: rgb(219, 194, 52);
+  margin-left: 0px;
+  margin-top: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding15Outline {
+  position: absolute;
+  width: 145px;
+  height: 85px;
+  background: linear-gradient(rgb(255, 249, 161),rgb(255, 230, 4));
+  margin-top: 315px;
+  margin-left: 0px;
+}
+
+.nycBuilding15Section {
+  width: 140px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow15On {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow15Off {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(158, 135, 34), rgb(136, 115, 21));
+}
+
+.nycBuilding16 {
+  position: absolute;
+  width: 90px;
+  height: 60px;
+  background-color: rgb(83, 197, 140);
+  margin-left: 200px;
+  margin-top: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding16Outline {
+  position: absolute;
+  width: 100px;
+  height: 65px;
+  background: linear-gradient(rgb(184, 255, 220),rgb(0, 219, 110));
+  margin-top: 335px;
+  margin-left: 195px;
+}
+
+.nycBuilding16Section {
+  width: 90px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow16On {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow16Off {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(41, 150, 122), rgb(21, 131, 76));
+}
+
+.nycBuilding17 {
+  position: absolute;
+  width: 70px;
+  height: 100px;
+  background-color: rgb(36, 174, 199);
+  margin-left: 330px;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nycBuilding17Outline {
+  position: absolute;
+  width: 75px;
+  height: 105px;
+  background: linear-gradient(rgb(165, 242, 255),rgb(38, 223, 230));
+  margin-top: 295px;
+  margin-left: 325px;
+}
+
+.nycBuilding17Section {
+  width: 70px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nycWindow17On {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(255, 255, 199), rgb(253, 255, 225));
+}
+
+.nycWindow17Off {
+  width: 16px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(41, 134, 146), rgb(20, 114, 138));
+}
+
+/* SUBWAY */
+.subwayContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background: linear-gradient(#eff5bf, #dbe491, #dbe491, #dbe491, #dbe491);
+  overflow: hidden;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.subwayFloor {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  background: linear-gradient(165deg, rgb(216, 209, 168), rgb(155, 161, 106), rgb(145, 140, 96), rgb(134, 138, 80));
+  margin-top: 250px;
+}
+
+.subwayChair {
+  position: absolute;
+  width: 247px;
+  height: 50px;
+  background: rgb(247, 255, 139);
+  transform: skew(-30deg);
+  border-radius: 0 0 0 20%;
+  margin-top: 210px;
+  margin-left: 134.5px;
+  border-bottom: 14px solid rgb(109, 112, 60);
+  z-index: 3;
+}
+
+.subwayChair:before {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 50px;
+  background: rgb(247, 255, 139);
+  transform: skew(30deg);
+  margin-left: 229.5px;
+  border-bottom: 14px solid rgb(109, 112, 60);
+}
+
+.subwayChair:after {
+  position: absolute;
+  content: "";
+  width: 247px;
+  height: 90px;
+  background: rgb(248, 255, 152);
+  transform: skew(30deg);
+  border-radius: 15% 0 0 0;
+  margin-top: -94px;
+  margin-left: -27px;
+  border-top: 4px solid rgb(250, 255, 179);
+}
+
+.subwayChairShadow {
+  position: absolute;
+  width: 260px;
+  height: 50px;
+  z-index: 2;
+  margin-top: 120px;
+  margin-left: 150px;
+  box-shadow: 0px 150px 70px 0px #000000;
+}
+
+.subwayChairShadowOverflow {
+  position: absolute;
+  width: 100px;
+  height: 240px;
+  background: white;
+  margin-left: 400px;
+  margin-top: 160px;
+  z-index: 5;
+}
+
+.subwayChairA {
+  position: absolute;
+  width: 100px;
+  height: 46px;
+  background: linear-gradient(
+    rgb(255, 232, 193),
+  rgb(255, 197, 90),
+  rgb(255, 186, 57),
+  rgb(255, 181, 45),
+  rgb(255, 199, 95),
+  rgb(255, 169, 8),
+  orange
+  );
+  border-radius: 0 0 0 10%;
+  margin-left: 5px;
+  z-index: 3;
+}
+
+.subwayChairA:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 87px;
+  background: linear-gradient(
+  orange,
+  rgb(255, 169, 8),
+  rgb(255, 200, 98),
+  rgb(255, 209, 123),
+  rgb(255, 181, 45),
+  rgb(255, 186, 57),
+  rgb(255, 197, 90),
+  rgb(255, 232, 193)
+  );
+  border-radius: 15% 0 0 0;
+  transform: skew(30deg);
+  margin-top: -87px;
+  margin-left: -25px;
+}
+
+.subwayChairB {
+  position: absolute;
+  width: 100px;
+  height: 46px;
+  background: linear-gradient(
+    rgb(255, 247, 173),
+    rgb(255, 244, 147),
+    rgb(255, 237, 72),
+    rgb(255, 236, 61),
+    rgb(255, 243, 138),
+    rgb(255, 236, 63),
+  rgb(255, 230, 0)
+  );
+  margin-left: 110px;
+  z-index: 3;
+}
+
+.subwayChairB:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 87px;
+  background: linear-gradient(
+    rgb(255, 230, 0),
+    rgb(255, 236, 63),
+    rgb(255, 243, 138),
+    rgb(255, 236, 61),
+    rgb(255, 237, 72),
+    rgb(255, 244, 147),
+    rgb(255, 247, 173)
+  );
+  transform: skew(30deg);
+  margin-top: -87px;
+  margin-left: -25px;
+}
+
+.subwayChairC {
+  position: absolute;
+  width: 32px;
+  height: 46px;
+  background: linear-gradient(
+    rgb(255, 232, 193),
+  rgb(255, 197, 90),
+  rgb(255, 186, 57),
+  rgb(255, 181, 45),
+  rgb(255, 199, 95),
+  rgb(255, 169, 8),
+  orange
+  );
+  margin-left: 215px;
+  z-index: 3;
+}
+
+.subwayChairC:before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 87px;
+  background: linear-gradient(
+  orange,
+  rgb(255, 169, 8),
+  rgb(255, 200, 98),
+  rgb(255, 209, 123),
+  rgb(255, 181, 45),
+  rgb(255, 186, 57),
+  rgb(255, 197, 90),
+  rgb(255, 232, 193)
+  );
+  transform: skew(30deg);
+  margin-top: -87px;
+  margin-left: -25px;
+}
+
+.subwayChairC:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 46px;
+  background: linear-gradient(
+    rgb(255, 232, 193),
+  rgb(255, 197, 90),
+  rgb(255, 186, 57),
+  rgb(255, 181, 45),
+  rgb(255, 199, 95),
+  rgb(255, 169, 8),
+  orange
+  );
+  transform: skew(30deg);
+  margin-left: 14.5px;
+}
+
+.subwayAd {
+  position: absolute;
+  width: 185px;
+  height: 105px;
+  background: linear-gradient(rgb(207, 207, 207), rgb(167, 167, 167), rgb(167, 167, 167));
+  margin-left: 215px;
+  z-index: 3;
+}
+
+.subwayAd:before {
+  content: "";
+  position: absolute;
+  width: 175px;
+  height: 100px;
+  background: linear-gradient(rgb(161, 77, 77), rgb(99, 48, 48), rgb(99, 48, 48));
+  margin-left: 5px;
+}
+
+.subwayAd:after {
+  content: "";
+  position: absolute;
+  width: 135px;
+  height: 80px;
+  background: linear-gradient(rgb(207, 207, 207), rgb(167, 167, 167), rgb(167, 167, 167));
+  margin-left: 25px;
+}
+
+.subwayAdContent {
+  position: absolute;
+  width: 125px;
+  height: 75px;
+  background: linear-gradient(rgb(226, 153, 255), rgb(201, 63, 255), rgb(201, 63, 255));
+  margin-left: 30px;
+  z-index: 4;
+}
+
+.subwayDivider {
+  position: absolute;
+  width: 30px;
+  height: 140px;
+  background: linear-gradient(to right, rgb(160,82,45), rgb(119, 54, 24));
+  transform: skewY(-60deg);
+  border-radius: 0 0 0 50%;
+  margin-left: 110px;
+  margin-top: 140px;
+  border-left: 8px solid rgb(167, 167, 167);
+  border-right: 4px solid rgb(167, 167, 167);
+  z-index: 2;
+}
+
+.subwayDivider:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 175px;
+  background: rgba(99, 99, 99, 0.459);
+  margin-top: -176px;
+  margin-left: -8px;
+  border-radius: 0 43% 0 0;
+  border-left: 8px solid rgb(167, 167, 167);
+  border-right: 4px solid rgb(167, 167, 167);
+  border-bottom: 8px solid rgb(167, 167, 167);
+}
+
+.subwayDivider:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 49.5px;
+  background: white;
+  transform: skewY(60deg);
+  margin-top: -186px;
+  margin-left: -10px;
+}
+
+.subwayPole {
+  position: absolute;
+  height: 380px;
+  width: 13px;
+  background: linear-gradient(
+  rgb(233, 233, 233),
+  rgb(197, 197, 197),
+  rgb(167, 167, 167),
+  rgb(124, 124, 124),
+  rgb(95, 95, 95)
+  );
+  z-index: 5;
+  margin-left: 270px;
+  border-radius: 0 0 15% 15%;
+}
+
+.subwayGround {
+  position: absolute;
+  width: 140px;
+  height: 120px;
+  background: linear-gradient(rgb(138, 107, 107), rgb(187, 143, 143), rgb(177, 137, 137), rgb(177, 137, 137), rgb(177, 137, 137));
+  z-index: 1;
+  margin-top: 130px;
+}
+
+.subwayGround:before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 24px;
+  background: linear-gradient(rgb(167, 167, 167), rgb(100, 100, 100) 2px, rgb(167, 167, 167) 4px,rgb(100, 100, 100) 6px,rgb(167, 167, 167) 8px, rgb(100, 100, 100) 10px,rgb(167, 167, 167) 12px, rgb(100, 100, 100) 14px,rgb(167, 167, 167) 16px, rgb(100, 100, 100) 18px,rgb(167, 167, 167) 20px, black 22px, black 24px);
+  margin-top: 96px;
+}
+
+.subwayGround:after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 16px;
+  background: rgb(209, 209, 86);
+  margin-top: 64px;
+}
+
+.subwayWall {
+  position: absolute;
+  width: 140px;
+  height: 130px;
+  background: linear-gradient(
+    rgb(233, 233, 233),
+    rgb(233, 233, 233) 16px,
+    rgb(185, 185, 185) 16px,
+    rgb(185, 185, 185) 18px,
+    rgb(233, 233, 233) 18px,
+    rgb(233, 233, 233) 34px,
+    rgb(185, 185, 185) 34px,
+    rgb(185, 185, 185) 36px,
+    rgb(233, 233, 233) 36px,
+    rgb(233, 233, 233) 52px,
+    rgb(185, 185, 185) 52px,
+    rgb(185, 185, 185) 54px,
+    rgb(233, 233, 233) 54px,
+    rgb(233, 233, 233) 70px,
+    rgb(185, 185, 185) 70px,
+    rgb(185, 185, 185) 72px,
+    rgb(233, 233, 233) 72px,
+    rgb(233, 233, 233) 88px,
+    rgb(185, 185, 185) 88px,
+    rgb(185, 185, 185) 90px,
+    rgb(233, 233, 233) 90px,
+    rgb(233, 233, 233) 106px,
+    rgb(185, 185, 185) 106px,
+    rgb(185, 185, 185) 108px,
+    rgb(233, 233, 233) 108px,
+    rgb(233, 233, 233) 124px,
+    rgb(185, 185, 185) 124px,
+    rgb(185, 185, 185) 126px
+  );
+}
+
+.subwayWall:before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 130px;
+  background: linear-gradient(to right,
+    transparent,
+    transparent 16px,
+    rgb(185, 185, 185) 16px,
+    rgb(185, 185, 185) 18px,
+    transparent 18px,
+    transparent 34px,
+    rgb(185, 185, 185) 34px,
+    rgb(185, 185, 185) 36px,
+    transparent 36px,
+    transparent 52px,
+    rgb(185, 185, 185) 52px,
+    rgb(185, 185, 185) 54px,
+    transparent 54px,
+    transparent 70px,
+    rgb(185, 185, 185) 70px,
+    rgb(185, 185, 185) 72px,
+    transparent 72px,
+    transparent 88px,
+    rgb(185, 185, 185) 88px,
+    rgb(185, 185, 185) 90px,
+    transparent 90px,
+    transparent 106px,
+    rgb(185, 185, 185) 106px,
+    rgb(185, 185, 185) 108px,
+    transparent 108px,
+    transparent 124px,
+    rgb(185, 185, 185) 124px,
+    rgb(185, 185, 185) 126px,
+    transparent 126px,
+    transparent 138px
+  );
+}
+
+.subwayWall:after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 16px;
+  background: rgb(124, 88, 88);
+  margin-top: 114px;
+}
+
+.subwayWallStreet {
+  position: absolute;
+  background: rgb(0, 0, 95);
+  width: 34px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17.5px;
+  margin-left: 36px;
+}
+
+.subwayWallStreet:before {
+  position: absolute;
+  content: "8ᵀᴴ ST";
+  font-size: 12px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.subwayDoor {
+  position: absolute;
+  height: 250px;
+  width: 10px;
+  background: gray;
+  z-index: 1;
+  margin-left: 136px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* GO */
+.goContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: rgb(227, 168, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.goBoardOuter {
+  position: absolute;
+  width: 326px;
+  height: 326px;
+  background: rgb(254, 255, 184);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goBoard {
+  position: absolute;
+  width: 286px;
+  height: 286px;
+  border: 2px solid rgb(80, 80, 80);
+}
+
+.goBoard:before {
+  content: "";
+  position: absolute;
+  width: 286px;
+  height: 286px;
+  background: linear-gradient(
+    transparent,
+    transparent 34px,
+    rgb(80, 80, 80) 34px,
+    rgb(80, 80, 80) 36px,
+    transparent 36px,
+    transparent 70px,
+    rgb(80, 80, 80) 70px,
+    rgb(80, 80, 80) 72px,
+    transparent 72px,
+    transparent 106px,
+    rgb(80, 80, 80) 106px,
+    rgb(80, 80, 80) 108px,
+    transparent 108px,
+    transparent 142px,
+    rgb(80, 80, 80) 142px,
+    rgb(80, 80, 80) 144.5px,
+    transparent 144.5px,
+    transparent 178px,
+    rgb(80, 80, 80) 178px,
+    rgb(80, 80, 80) 180px,
+    transparent 180px,
+    transparent 214px,
+    rgb(80, 80, 80) 214px,
+    rgb(80, 80, 80) 216px,
+    transparent 216px,
+    transparent 250px,
+    rgb(80, 80, 80) 250px,
+    rgb(80, 80, 80) 252px,
+    transparent 252px,
+    transparent 286px
+  )
+}
+
+.goBoard:after {
+  content: "";
+  position: absolute;
+  width: 286px;
+  height: 286px;
+  background: linear-gradient(to right,
+    transparent,
+    transparent 34px,
+    rgb(80, 80, 80) 34px,
+    rgb(80, 80, 80) 36px,
+    transparent 36px,
+    transparent 70px,
+    rgb(80, 80, 80) 70px,
+    rgb(80, 80, 80) 72px,
+    transparent 72px,
+    transparent 106px,
+    rgb(80, 80, 80) 106px,
+    rgb(80, 80, 80) 108px,
+    transparent 108px,
+    transparent 142px,
+    rgb(80, 80, 80) 142px,
+    rgb(80, 80, 80) 144.5px,
+    transparent 144.5px,
+    transparent 178px,
+    rgb(80, 80, 80) 178px,
+    rgb(80, 80, 80) 180px,
+    transparent 180px,
+    transparent 214px,
+    rgb(80, 80, 80) 214px,
+    rgb(80, 80, 80) 216px,
+    transparent 216px,
+    transparent 250px,
+    rgb(80, 80, 80) 250px,
+    rgb(80, 80, 80) 252px,
+    transparent 252px,
+    transparent 286px
+  )
+}
+
+.goDotsA {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(80, 80, 80);
+  border-radius: 50%;
+  margin-left: 66px;
+  margin-top: 66px;
+}
+
+.goDotsA:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(80, 80, 80);
+  border-radius: 50%;
+  margin-top: 143.5px;
+}
+
+.goDotsA:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(80, 80, 80);
+  border-radius: 50%;
+  margin-left: 144px;
+}
+
+.goDotsB {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(80, 80, 80);
+  border-radius: 50%;
+  margin-left: 138.5px;
+  margin-top: 138.5px;
+}
+
+.goDotsB:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(80, 80, 80);
+  border-radius: 50%;
+  margin-left: 71.5px;
+  margin-top: 71px;
+}
+
+.goWhite {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 52.5px;
+  margin-left: 52.5px;
+  z-index: 2;
+}
+
+.goWhite2 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 196.5px;
+  margin-left: 198px;
+  z-index: 2;
+}
+
+.goBlack {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 52.5px;
+  margin-left: 89.5px;
+  z-index: 2;
+}
+
+.goBlack2 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 196.5px;
+  margin-left: 162px;
+  z-index: 2;
+}
+
+.goBlack3 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 161px;
+  margin-left: 198px;
+  z-index: 2;
+}
+
+/* IPHONE */
+.iPhoneContainer {
+  min-width: 400px;
+  min-height: 400px;
+  background: rgb(146, 255, 240);
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.iPhoneTop {
+  position: absolute;
+  height: 150px;
+  width: 170px;
+  background: rgb(61, 61, 61);
+  margin-top: 50px;
+  margin-left: 115px;
+  border-radius: 15% 15% 0 0;
+}
+
+.iPhoneTop:before {
+  content: "";
+  position: absolute;
+  height: 144px;
+  width: 158px;
+  background: rgb(0, 0, 0);
+  margin-top: 6px;
+  margin-left: 6px;
+  border-radius: 13% 13% 0 0;
+}
+
+.iPhoneTop:after {
+  content: "";
+  position: absolute;
+  height: 138px;
+  width: 146px;
+  background: rgb(253, 106, 106);
+  margin-top: 12px;
+  margin-left: 12px;
+  border-radius: 10% 10% 0 0;
+}
+
+.iPhoneBottom {
+  position: absolute;
+  height: 150px;
+  width: 170px;
+  background: rgb(61, 61, 61);
+  margin-top: 200px;
+  margin-left: 115px;
+  border-radius: 0 0 15% 15%;
+}
+
+.iPhoneBottom:before {
+  content: "";
+  position: absolute;
+  height: 144px;
+  width: 158px;
+  background: rgb(0, 0, 0);
+  margin-top: 0px;
+  margin-left: 6px;
+  border-radius: 0 0 13% 13%;
+}
+
+.iPhoneBottom:after {
+  content: "";
+  position: absolute;
+  height: 138px;
+  width: 146px;
+  background: rgb(253, 106, 106);
+  margin-top: 0px;
+  margin-left: 12px;
+  border-radius: 0 0 10% 10%;
+}
+
+.iPhoneSpeaker {
+  position: absolute;
+  width: 82px;
+  height: 8px;
+  background: black;
+  margin-top: 12px;
+  margin-left: 44px;
+  border-radius: 0 0 50% 50%;
+  z-index: 4;
+}
+
+.iPhoneSpeaker:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: rgb(61, 61, 61);
+  margin-left: 30px;
+  border-radius: 25%;
+}
+
+.iPhoneScreenTop {
+  position: absolute;
+  width: 170px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.iPhoneScreenTop:before {
+  content: "11:32";
+  color: white;
+  font-size: 36px;
+}
+
+.iPhoneScreenTop:after {
+  content: "Tuesday, August 25";
+  color: white;
+  font-size: 9px;
+}
+
+.iPhoneScreenBottom {
+  position: absolute;
+  width: 170px;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.iPhoneScreenBottom:before {
+  content: "Swipe up to open";
+  position: absolute;
+  color: white;
+  font-size: 7px;
+  margin-top: 120px;
+}
+
+.iPhoneScreenBottom:after {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 3px;
+  background: white;
+  margin-top: 132px;
+  border-radius: 15%;
+}
+
+.iPhoneSoundButton {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgb(80, 80, 80);
+  margin-left: -2px;
+  margin-top: 70px;
+  border-radius: 40% 0 0 40%;
+}
+
+.iPhoneSoundButton:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgb(80, 80, 80);
+  margin-top: 24px;
+  border-radius: 40% 0 0 40%;
+}
+
+.iPhoneLockButton {
+  position: absolute;
+  width: 2px;
+  height: 36px;
+  background: rgb(80, 80, 80);
+  margin-left: 170px;
+  margin-top: 72px;
+  border-radius: 0 40% 40% 0;
+}
+
+.iPhoneBattery {
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  border: 0.5px solid rgb(199, 199, 199);
+  border-radius: 20%;
+  margin-top: 14px;
+  margin-left: 132px;
+  z-index: 6;
+}
+
+.iPhoneBattery:before {
+  content: "";
+  position: absolute;
+  width: 10.5px;
+  height: 4px;
+  background: rgb(121, 218, 121);
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.iPhoneBattery:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 2px;
+  background: rgb(199, 199, 199);
+  margin-top: 2px;
+  margin-left: 14px;
 }
