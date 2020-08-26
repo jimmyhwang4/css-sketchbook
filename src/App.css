@@ -392,6 +392,7 @@ body {
 }
 
 .milkLabel:before {
+  position: absolute;
   content: "MILK";
   color: rgb(255, 91, 91);
   font-size: 52px;
@@ -400,12 +401,12 @@ body {
 .milkLabel:after {
   content: "";
   position: absolute;
-  width: 80px;
+  width: 81px;
   height: 70px;
   background: linear-gradient(150deg, white, rgb(230, 230, 230));
   transform: skewY(-30deg);
-  margin-left: 220px;
-  margin-top: -46.5px;
+  margin-left: 219px;
+  margin-top: -47px;
 }
 
 .milkShadow {
@@ -2011,6 +2012,7 @@ body {
   margin-top: 240px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .nycBuilding2Outline {
@@ -2020,6 +2022,7 @@ body {
   background: linear-gradient(rgb(255, 97, 194),rgb(175, 0, 137));
   margin-top: 235px;
   margin-left: 90px;
+  z-index: 3;
 }
 
 .nycBuilding2Section {
@@ -2052,6 +2055,7 @@ body {
   margin-top: 175px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .nycBuilding3 {
@@ -2063,6 +2067,7 @@ body {
   margin-top: 180px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .nycBuilding3Section {
@@ -2467,6 +2472,7 @@ body {
   margin-top: 320px;
   display: flex;
   flex-direction: column;
+  z-index: 4;
 }
 
 .nycBuilding15Outline {
@@ -2476,6 +2482,7 @@ body {
   background: linear-gradient(rgb(255, 249, 161),rgb(255, 230, 4));
   margin-top: 315px;
   margin-left: 0px;
+  z-index: 3;
 }
 
 .nycBuilding15Section {
@@ -2508,6 +2515,7 @@ body {
   margin-top: 340px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .nycBuilding16Outline {
@@ -2517,6 +2525,7 @@ body {
   background: linear-gradient(rgb(184, 255, 220),rgb(0, 219, 110));
   margin-top: 335px;
   margin-left: 195px;
+  z-index: 3;
 }
 
 .nycBuilding16Section {
@@ -2857,6 +2866,7 @@ body {
   transform: skewY(60deg);
   margin-top: -186px;
   margin-left: -10px;
+  z-index: 1;
 }
 
 .subwayPole {
@@ -3001,7 +3011,7 @@ body {
 .subwayWallStreet:before {
   position: absolute;
   content: "8ᵀᴴ ST";
-  font-size: 12px;
+  font-size: 10px;
   color: white;
 }
 
