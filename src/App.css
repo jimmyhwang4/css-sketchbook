@@ -381,6 +381,7 @@ body {
 }
 
 .milkLabel {
+  position: absolute;
   width: 140px;
   height: 70px;
   background-color: white;
@@ -414,7 +415,7 @@ body {
   height: 52px;
   transform: skew(-61deg);
   margin-left: 144px;
-  margin-top: -19px;
+  margin-top: -29px;
   box-shadow: 18px 10px 6px -4px #630000;
   z-index: -999;
 }
