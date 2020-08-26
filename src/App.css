@@ -7,33 +7,50 @@ body {
   overflow-x: hidden;
 }
 
-.wrapper {
+.headerContainer {
   width: 100%;
+  height: 110px;
+  background: linear-gradient(to right, rgb(0, 109, 103), rgb(22, 70, 126));
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
-.headerContainer {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(to right, rgb(0, 109, 103), rgb(22, 70, 126));
-  color: white;
+.headerBig {
   font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  color: rgb(180, 255, 242);
+}
+
+.headerSmall {
+  margin-top: -24px;
+  font-size: 14px;
+  color: #f7ffd4;
+}
+
+.headerSmall a {
+  text-decoration: none;
+  color: #f7ffd4;
+}
+
+.headerSmall a:hover {
+  color: rgb(0, 255, 213);
 }
 
 @media screen and (min-width: 950px) {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
   .row {
     width: 850px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
   }
 
   .lastRow {
@@ -42,17 +59,24 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
   }
 
 }
 
 @media screen and (max-width: 949px) {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
   .row {
     width: 400px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
 
   .lastRow {
@@ -60,7 +84,124 @@ body {
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .row {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lastRow {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px !important;
+  }
+
+  /* CCONTAINER MARGIN TOP REMOVAL */
+  .waterbottleContainer {
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1fdff;
+    margin-top: 0px !important;
+  }
+
+  .milkContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #ffb3b3;
+    margin-top: 0px !important;
+  }
+
+  .ojContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #ffdba4;
+    margin-top: 0px !important;
+  }
+
+  .sojuContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #adffd9;
+    margin-top: 0px !important;
+  }
+
+  .jimmy3Container {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: rgb(137, 137, 255);
+    margin-top: 0px !important;
+  }
+
+  .jimmy4Container {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: rgb(109, 255, 206);
+    margin-top: 0px !important;
+  }
+
+  .firstNameContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: rgb(169, 209, 255);
+    margin-top: 0px !important;
+  }
+
+  .firstName2Container {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: rgb(255, 180, 240);
+    margin-top: 0px !important;
+  }
+
+  .nycContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background: linear-gradient(rgb(29, 0, 29), rgb(33, 6, 46), rgb(74, 16, 122), rgb(148, 113, 168), rgb(132, 39, 145), rgb(68, 27, 136), rgb(79, 31, 167), rgb(38, 115, 202));
+    margin-top: 0px !important;
+  }
+
+  .subwayContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background: linear-gradient(#eff5bf, #dbe491, #dbe491, #dbe491, #dbe491);
+    margin-top: 0px !important;
+  }
+
+  .goContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: rgb(227, 168, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px !important;
+  }
+
+  .iPhoneContainer {
+    min-width: 400px;
+    min-height: 400px;
+    background: rgb(146, 255, 240);
+    margin-top: 0px !important;
   }
 
 }
@@ -75,7 +216,6 @@ body {
   align-items: center;
   background-color: #d1fdff;
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .waterbottleCap {
@@ -178,7 +318,6 @@ body {
   min-height: 400px;
   background-color: #ffb3b3;
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .milkFront {
@@ -285,7 +424,6 @@ body {
   min-height: 400px;
   background-color: #ffdba4;
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .ojCupOutline {
@@ -432,7 +570,6 @@ body {
   min-height: 400px;
   background-color: #adffd9;
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .sojuBottle {
@@ -503,7 +640,6 @@ body {
   min-height: 400px;
   background: linear-gradient(135deg, rgb(255, 131, 131), rgb(255, 206, 116), rgb(255, 255, 147), rgb(130, 255, 172), rgb(114, 159, 255), rgb(196, 107, 255));
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .jimmyFace {
@@ -741,7 +877,6 @@ body {
   min-height: 400px;
   background: linear-gradient(135deg, rgb(90, 90, 90), rgb(121, 121, 121), rgb(141, 141, 141), rgb(190, 190, 190), rgb(221, 221, 221), rgb(245, 245, 245), rgb(230, 230, 230), rgb(206, 206, 206));
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .jimmy2Hair {
@@ -925,7 +1060,6 @@ body {
   min-height: 400px;
   background-color: rgb(137, 137, 255);
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .jimmy3GlassesL {
@@ -988,7 +1122,6 @@ body {
   min-height: 400px;
   background-color: rgb(109, 255, 206);
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .jimmy4GlassesL {
@@ -1051,7 +1184,6 @@ body {
   min-height: 400px;
   background-color: rgb(169, 209, 255);
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .firstNameJ {
@@ -1434,7 +1566,6 @@ body {
   min-height: 400px;
   background-color: rgb(255, 180, 240);
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .firstName2J {
@@ -1829,7 +1960,6 @@ body {
   min-height: 400px;
   background: linear-gradient(rgb(29, 0, 29), rgb(33, 6, 46), rgb(74, 16, 122), rgb(148, 113, 168), rgb(132, 39, 145), rgb(68, 27, 136), rgb(79, 31, 167), rgb(38, 115, 202));
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .nycBuilding1 {
@@ -2456,9 +2586,7 @@ body {
   min-width: 400px;
   min-height: 400px;
   background: linear-gradient(#eff5bf, #dbe491, #dbe491, #dbe491, #dbe491);
-  overflow: hidden;
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .subwayFloor {
@@ -2895,7 +3023,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .goBoardOuter {
@@ -3105,23 +3232,23 @@ body {
   min-height: 400px;
   background: rgb(146, 255, 240);
   margin-top: 50px;
-  overflow: hidden;
 }
 
 .iPhoneTop {
   position: absolute;
-  height: 150px;
+  height: 152px;
   width: 170px;
   background: rgb(61, 61, 61);
   margin-top: 50px;
   margin-left: 115px;
   border-radius: 15% 15% 0 0;
+  z-index: 2;
 }
 
 .iPhoneTop:before {
   content: "";
   position: absolute;
-  height: 144px;
+  height: 147px;
   width: 158px;
   background: rgb(0, 0, 0);
   margin-top: 6px;
@@ -3132,7 +3259,7 @@ body {
 .iPhoneTop:after {
   content: "";
   position: absolute;
-  height: 138px;
+  height: 143px;
   width: 146px;
   background: rgb(253, 106, 106);
   margin-top: 12px;
