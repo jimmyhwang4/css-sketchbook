@@ -321,6 +321,7 @@ body {
 }
 
 .milkFront {
+  position: absolute;
   width: 140px;
   height: 140px;
   background: linear-gradient(rgb(255, 90, 90), rgb(255, 50, 50));
@@ -350,11 +351,12 @@ body {
 }
 
 .milkSide {
+  position: absolute;
   width: 80px;
   height: 140px;
   background: linear-gradient(150deg, rgb(255, 110, 110), rgb(255, 50, 50));
   transform: skewY(-30deg);
-  margin-top: -163px;
+  margin-top: 157px;
   margin-left: 240px;
 }
 
@@ -385,7 +387,7 @@ body {
   width: 140px;
   height: 70px;
   background-color: white;
-  margin-top: -80px;
+  margin-top: 216px;
   margin-left: 100px;
   display: flex;
   justify-content: center;
@@ -411,13 +413,13 @@ body {
 }
 
 .milkShadow {
+  position: absolute;
   width: 140px;
   height: 52px;
   transform: skew(-61deg);
   margin-left: 144px;
-  margin-top: -29px;
+  margin-top: 267.5px;
   box-shadow: 18px 10px 6px -4px #630000;
-  z-index: -999;
 }
 
 /* ORANGE JUICE */
