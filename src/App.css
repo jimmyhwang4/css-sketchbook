@@ -398,7 +398,7 @@ body {
   position: absolute;
   content: "MILK";
   color: rgb(255, 91, 91);
-  font-size: 52px;
+  font-size: 44px;
 }
 
 .milkLabel:after {
